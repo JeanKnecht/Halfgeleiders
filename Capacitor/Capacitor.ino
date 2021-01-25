@@ -13,9 +13,6 @@ Serial.begin(9600);
 }
 
 void loop() {
-
-Serial.println("Start");
-
 // fade in from min to max in increments of 5 points:
 
 for (int fadeValue = 0 ; fadeValue <= 255; fadeValue += 5) {
@@ -40,19 +37,13 @@ float VoltageLed = 5.0*(led-resistor)/1024;
 
 double Current = 1000 * VoltageResistor / resistance ;
 
-Serial.print("U_R: ");
-
-Serial.print(VoltageResistor);
-
-Serial.print(" U_led: ");
 
 Serial.print(VoltageLed);
 
-Serial.print(" I_led: ");
+Serial.print(" ");
 
-Serial.print(Current);
+Serial.println(Current);
 
-Serial.println(" mA");
 
 }
 
